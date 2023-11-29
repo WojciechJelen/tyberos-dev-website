@@ -1,5 +1,6 @@
 ---
 import Navigation from './Navigation.astro'
+import ThemeToggle from './react/ThemeToggle'
 
 export interface NavbarItem {
   href: string
@@ -26,6 +27,7 @@ const navbarItems = [
 ]
 ---
 
-<header>
+<header class="flex items-center">
   <Navigation navigationItems={navbarItems} />
+  <ThemeToggle client:visible />
 </header>
