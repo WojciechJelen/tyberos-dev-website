@@ -1,0 +1,26 @@
+---
+import type { NavbarItem } from "./Header.astro";
+
+interface Props {
+  navigationItems: NavbarItem[];
+}
+
+const { navigationItems } = Astro.props;
+---
+
+<nav class="bg-gray-800 text-white p-4">
+  <ul class="flex flex-col md:flex-row md:space-x-4">
+    {
+      navigationItems?.map((navItem: any) => (
+        <li>
+          <a
+            href={navItem.href}
+            class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+          >
+            {navItem.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

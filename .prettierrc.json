@@ -1,0 +1,13 @@
+{
+  "astroAllowShorthand": true,
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "pluginSearchDirs": ["."],
+  "plugins": ["prettier-plugin-astro"]
+}
