@@ -1,21 +1,21 @@
 ---
-import type { NavbarItem } from "./Header.astro";
+import type { NavbarItem } from './Header.astro'
 
 interface Props {
-  navigationItems: NavbarItem[];
+  navigationItems: NavbarItem[]
 }
 
-const { navigationItems } = Astro.props;
+const { navigationItems } = Astro.props
 ---
 
-<nav class="bg-gray-800 text-white p-4">
+<nav class="bg-gray-800 p-4 text-white">
   <ul class="flex flex-col md:flex-row md:space-x-4">
     {
       navigationItems?.map((navItem: any) => (
         <li>
           <a
             href={navItem.href}
-            class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+            class="rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700"
           >
             {navItem.label}
           </a>
