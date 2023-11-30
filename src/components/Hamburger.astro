@@ -1,13 +1,13 @@
 ---
-import type { NavbarItem } from "./Header.astro";
+import type { NavbarItem } from './Header.astro'
 
 interface Props {
-  navigationItems: NavbarItem[];
+  navigationItems: NavbarItem[]
 }
 
-const { navigationItems } = Astro.props;
+const { navigationItems } = Astro.props
 ---
 
 <div class="hamburger">
-  {navigationItems.map((item: any) => <span>{item.label}</span>)}
+  {navigationItems.map((item) => <span>{item.label}</span>)}
 </div>
