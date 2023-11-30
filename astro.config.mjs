@@ -9,4 +9,8 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   output: 'static',
   adapter: vercel(),
+  alias: {
+    '@layouts': './src/layouts',
+    '@components': './src/components',
+  },
 })
