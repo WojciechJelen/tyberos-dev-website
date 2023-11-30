@@ -3,12 +3,8 @@
   "compilerOptions": {
     "baseUrl": "/Users/wojciechjelen/workspace/tyberos-dev-website",
     "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ]
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
