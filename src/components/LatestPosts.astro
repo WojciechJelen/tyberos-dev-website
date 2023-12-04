@@ -12,13 +12,5 @@ const latestPosts = latestPost.slice(0, 3);
 ---
 
 <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-  {
-    latestPosts.map((post) => (
-      <LatestPost
-        title={post.data.title}
-        description={post.data.description}
-        image={post.data.image}
-      />
-    ))
-  }
+  {latestPosts.map((post) => <LatestPost post={post} />)}
 </div>

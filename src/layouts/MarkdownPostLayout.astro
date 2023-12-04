@@ -1,16 +1,22 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
+import { Image } from 'astro:assets';
 
-const { frontmatter } = Astro.props;
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={post.data.title}>
   <div class="">
-    <h3>{frontmatter.description}</h3>
-    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <h3>{post.data.description}</h3>
+    <p>{post.data.pubDate.toString().slice(0, 10)}</p>
     <div>
       {
-        frontmatter.tags.map((tag: string) => {
+        post.data.tags.map((tag: string) => {
           return (
             <span class="mr-2 rounded bg-slate-700 px-2 py-1 text-white">
               {tag}
@@ -19,14 +25,14 @@ const { frontmatter } = Astro.props;
         })
       }
     </div>
-    <p>Written by {frontmatter.author}</p>
-    <p>Published: {frontmatter.pubDate}</p>
+    <p>Written by {post.data.author}</p>
+    <p>Published: {post.data.pubDate}</p>
 
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <Image src={post.data.image.path} alt={post.data.image.alt} />
 
     <div class="flex flex-wrap gap-2">
       {
-        frontmatter?.tags?.map((tag: any) => (
+        post.data?.tags?.map((tag: any) => (
           <div class="min-w-[100px] rounded-md border-dotted bg-red-400 p-2 text-center">
             <a href={`/tags/${tag}`} class="no-underline">
               {tag}

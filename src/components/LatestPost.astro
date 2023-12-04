@@ -1,16 +1,16 @@
 ---
-// import { Image } from 'astro:assets';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
-  title: string;
-  description: string;
-  image: {
-    url: string;
-    alt: string;
-  };
+  post: CollectionEntry<'posts'>;
 }
 
-const { title, description, image } = Astro.props;
+const {
+  post: {
+    data: { title, description, image },
+  },
+} = Astro.props;
 ---
 
 <div
@@ -21,13 +21,8 @@ const { title, description, image } = Astro.props;
   </h2>
   <p class="text-sm">{description}</p>
   <div class="mt-2">
-    <!-- <Image
-      src={import(image.url)}
-      alt={image.alt}
-      class="h-40 w-full rounded-md object-cover"
-    /> -->
-    <img
-      src={image.url}
+    <Image
+      src={image.path}
       alt={image.alt}
       class="h-40 w-full rounded-md object-cover"
     />
