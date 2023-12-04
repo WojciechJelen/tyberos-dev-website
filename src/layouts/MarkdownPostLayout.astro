@@ -11,7 +11,7 @@ const { post } = Astro.props;
 ---
 
 <BaseLayout pageTitle={post.data.title}>
-  <div class="">
+  <div class="container mx-auto">
     <h3>{post.data.description}</h3>
     <p>{post.data.pubDate.toString().slice(0, 10)}</p>
     <div>
