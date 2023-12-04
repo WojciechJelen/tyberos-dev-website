@@ -1,5 +1,5 @@
 ---
-import Hamburger from './Hamburger.astro';
+// import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
 import ThemeToggle from './react/ThemeToggle';
 
@@ -35,7 +35,7 @@ const navbarItems = [
 <script>
   // This script can be added directly into your Astro component
   // inside a <script> tag, or into its own separate .js file.
-  document.addEventListener('DOMContentLoaded', (event) => {
+  document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 0) {

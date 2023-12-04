@@ -5,13 +5,6 @@ interface Props {
   navigationItems: NavbarItem[];
 }
 
-// Define your component's state and methods here
-let menuOpen = false;
-
-const toggleMenu = () => {
-  menuOpen = !menuOpen;
-};
-
 const { navigationItems } = Astro.props;
 ---
 
@@ -19,12 +12,9 @@ const { navigationItems } = Astro.props;
 <button
   class="flex flex-col space-y-2"
   aria-label="Toggle Menu"
-  @click="${toggleMenu}"
->
-  <span class="block h-0.5 w-8 bg-gray-300"></span>
-  <span class="block h-0.5 w-8 bg-gray-300"></span>
-  <span class="block h-0.5 w-8 bg-gray-300"></span>
-</button>
+  class="block h-0.5 w-8 bg-gray-300"></button>
+<span class="block h-0.5 w-8 bg-gray-300"></span>
+<span class="block h-0.5 w-8 bg-gray-300"></span>
 
 <!-- Menu Overlay -->
 <div
