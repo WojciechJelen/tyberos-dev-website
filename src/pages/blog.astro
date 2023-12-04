@@ -1,12 +1,12 @@
 ---
-import BlogPost from '@components/BlogPost.astro'
-import BaseLayout from '@layouts/BaseLayout.astro'
+import BlogPost from '@components/blog/BlogPost.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
 
-import { getCollection } from 'astro:content'
+import { getCollection } from 'astro:content';
 
-const pageTitle = 'Blog'
+const pageTitle = 'Blog';
 
-const allPosts = await getCollection('posts')
+const allPosts = await getCollection('posts');
 ---
 
 <BaseLayout {pageTitle}>

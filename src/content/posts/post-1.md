@@ -1,24 +1,32 @@
 ---
-title: 'My First Blog Post'
+title: 'Starting my journey with Rust'
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+description: 'What motivated me to learn Rust and how I want to approach it.'
+author: 'tyberos'
 image:
-  url: 'https://docs.astro.build/assets/full-logo-light.png'
-  alt: 'The full Astro logo.'
-tags: ['blockchain', 'rust']
+  url: '/src/assets/images/rust-journey.png'
+  alt: 'Journey into learning Rust programming language.'
+tags: ['rust']
 ---
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+Hello, fellow tech enthusiasts!
 
-## What I've accomplished
+Today, I'm excited to share my journey into the world of Rust, a programming language that's been gaining traction for its performance and safety. As someone who's primarily programmed in JavaScript and TypeScript, this is a significant shift for me, and I want to share why I made this leap.
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+## 1. Diving Deeper into Programming Concepts
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+JavaScript and TypeScript have been my go-to languages for a while. They're powerful and flexible, making them perfect for a wide range of applications. However, they come with a safety net - the garbage collector, which automatically manages memory. While convenient, this can obscure some of the fundamental aspects of how programs interact with system resources.
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+Learning Rust represents a challenge to deepen my understanding of lower-level programming concepts. It's a language that doesn't hold your hand as much, requiring a more nuanced understanding of memory management, data races, and concurrency. By grappling with these concepts, I expect to gain a richer, more nuanced understanding of programming as a whole.
 
-## What's next
+## 2. Gearing Up for Blockchain Development
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+Blockchain technology is rapidly evolving, and Rust is at the forefront of this revolution. Many cutting-edge blockchain platforms, such as Solana, Near, and Arbitrum Stylus, use Rust for smart contract development. Moreover, numerous blockchain protocols are written in Rust, underscoring its reliability and efficiency in this domain.
+
+My interest in blockchain technology and its potential applications is a significant driver for learning Rust. By mastering Rust, I aim to become more proficient in developing smart contracts and contributing to blockchain projects. This skill set will not only enhance my technical abilities but also open up new opportunities in the burgeoning field of blockchain technology.
+
+## Conclusion
+
+The journey into Rust is both a challenge and an opportunity. It's a departure from the comfortable realms of JavaScript and TypeScript, pushing me into territories that demand a deeper technical understanding and offering a chance to be at the forefront of blockchain development. I'm excited to share my experiences and learnings along the way, and I hope to inspire others to explore this fascinating language.
+
+Stay tuned for more updates on my Rust journey!

@@ -9,6 +9,8 @@ const ThemeToggle: React.FC = () => {
 
     const isDark = element.classList.contains('dark')
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
+
+    // setDarkMode(isDark)
   }
 
   return (

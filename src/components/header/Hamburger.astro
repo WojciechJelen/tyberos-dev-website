@@ -1,0 +1,39 @@
+---
+import type { NavbarItem } from './Header.astro';
+
+interface Props {
+  navigationItems: NavbarItem[];
+}
+
+// Define your component's state and methods here
+let menuOpen = false;
+
+const toggleMenu = () => {
+  menuOpen = !menuOpen;
+};
+
+const { navigationItems } = Astro.props;
+---
+
+<!-- Hamburger Icon -->
+<button
+  class="flex flex-col space-y-2"
+  aria-label="Toggle Menu"
+  @click="${toggleMenu}"
+>
+  <span class="block h-0.5 w-8 bg-gray-300"></span>
+  <span class="block h-0.5 w-8 bg-gray-300"></span>
+  <span class="block h-0.5 w-8 bg-gray-300"></span>
+</button>
+
+<!-- Menu Overlay -->
+<div
+  class="${menuOpen ? 'fixed' : 'hidden'} inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 transition-all duration-300"
+>
+  <!-- Menu Content -->
+  <nav class="text-center">
+    <ul>
+      {navigationItems.map((item) => <li>{item.label}</li>)}
+    </ul>
+  </nav>
+</div>

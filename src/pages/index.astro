@@ -1,14 +1,35 @@
 ---
+import LatestPosts from '@components/LatestPosts.astro'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import Greeting from '../components/react/Greeting.jsx'
 
 const pageTitle = 'Tyberos Dev'
 ---
 
 <BaseLayout {pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting
-    client:load
-    messages={['Hello, world!', 'Welcome to my blog!', "I'm glad you're here!"]}
-  />
+  <div class="container mx-auto">
+    <section class="py-10">
+      <div>
+        <h1
+          class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-600 bg-clip-text p-4 text-5xl font-extrabold text-transparent"
+        >
+          Hi! I'm Wojciech,
+          <br />
+           a full-stack developer.
+        </h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>My latest blog posts</h2>
+        <LatestPosts />
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Projects</h2>
+      </div>
+    </section>
+  </div>
 </BaseLayout>

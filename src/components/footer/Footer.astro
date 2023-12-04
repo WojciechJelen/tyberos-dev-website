@@ -1,0 +1,28 @@
+---
+import GitHub from './social-icons/GitHubIcon.astro';
+import LinkedinIcon from './social-icons/LinkedinIcon.astro';
+import TelegramIcon from './social-icons/TelegramIcon.astro';
+import XIcon from './social-icons/XIcon.astro';
+
+const platform = 'github';
+const username = 'withastro';
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  <div class="container mx-auto">
+    <div class="flex items-center gap-4">
+      <GitHub />
+      <LinkedinIcon />
+      <TelegramIcon />
+      <XIcon />
+    </div>
+  </div>
+</footer>
