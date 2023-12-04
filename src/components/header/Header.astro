@@ -32,9 +32,7 @@ const navbarItems = [
   </div>
 </header>
 
-<script>
-  // This script can be added directly into your Astro component
-  // inside a <script> tag, or into its own separate .js file.
+<script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {

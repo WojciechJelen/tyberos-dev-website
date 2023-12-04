@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 
 interface Props {
   title: string;
@@ -21,8 +21,13 @@ const { title, description, image } = Astro.props;
   </h2>
   <p class="text-sm">{description}</p>
   <div class="mt-2">
-    <Image
+    <!-- <Image
       src={import(image.url)}
+      alt={image.alt}
+      class="h-40 w-full rounded-md object-cover"
+    /> -->
+    <img
+      src={image.url}
       alt={image.alt}
       class="h-40 w-full rounded-md object-cover"
     />

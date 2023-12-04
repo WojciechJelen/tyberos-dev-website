@@ -4,7 +4,7 @@ pubDate: 2022-07-01
 description: 'What motivated me to learn Rust and how I want to approach it.'
 author: 'tyberos'
 image:
-  url: '/src/assets/images/rust-journey.png'
+  url: '/images/rust-journey.png'
   alt: 'Journey into learning Rust programming language.'
 tags: ['rust']
 ---
