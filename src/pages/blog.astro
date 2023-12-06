@@ -10,14 +10,18 @@ const allPosts = await getCollection('posts');
 ---
 
 <BaseLayout {pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <BlogPost
-          post={{ title: post.data.title, url: `/posts/${post.slug}/` }}
-        />
-      ))
-    }
-  </ul>
+  <section>
+    <div class="container mx-auto">
+      <h2>Blog posts</h2>
+      <ul>
+        {
+          allPosts.map((post) => (
+            <BlogPost
+              post={{ title: post.data.title, url: `/posts/${post.slug}/` }}
+            />
+          ))
+        }
+      </ul>
+    </div>
+  </section>
 </BaseLayout>

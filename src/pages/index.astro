@@ -1,27 +1,18 @@
 ---
-import LatestPosts from '@components/LatestPosts.astro'
-import BaseLayout from '@layouts/BaseLayout.astro'
+import Hero from '@components/hero/Hero.astro';
+import LatestPosts from '@components/LatestPosts.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
 
-const pageTitle = 'Tyberos Dev'
+const pageTitle = 'Tyberos Dev';
 ---
 
 <BaseLayout {pageTitle}>
   <div class="container mx-auto">
-    <section class="py-10">
-      <div>
-        <h1
-          class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-600 bg-clip-text p-4 text-5xl font-extrabold text-transparent"
-        >
-          Hi! I'm Wojciech,
-          <br />
-           a full-stack developer.
-        </h1>
-      </div>
-    </section>
+    <Hero />
 
     <section>
       <div class="container">
-        <h2>My latest blog posts</h2>
+        <h3 class="mb-4 text-2xl">My latest blog posts</h3>
         <LatestPosts />
       </div>
     </section>
