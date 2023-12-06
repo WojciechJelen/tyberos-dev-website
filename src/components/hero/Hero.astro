@@ -1,22 +1,15 @@
 ---
-import ContactMeButton from './ContactMeButton.astro';
-import GithubButton from './GithubButton.astro';
+import HeroContent from './HeroContent.astro';
 ---
 
 <section class="py-20">
-  <div>
-    <h1 class="py-10 text-6xl font-extrabold">
-      Hi! I'm<span
-        class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-600 bg-clip-text p-4 text-transparent"
-        >Wojciech</span
-      >,
-      <br />
-       a full-stack developer.
-    </h1>
-
-    <div class="flex gap-4">
-      <ContactMeButton />
-      <GithubButton />
-    </div>
-  </div>
+  <video
+    autoplay
+    muted
+    loop
+    class="absolute left-0 top-[-340px] z-[-2] hidden h-full w-full rotate-180 object-cover dark:block"
+  >
+    <source src="/video/blackhole.webm" type="video/webm" />
+  </video>
+  <HeroContent />
 </section>

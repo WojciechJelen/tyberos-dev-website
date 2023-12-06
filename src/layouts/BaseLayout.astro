@@ -4,6 +4,7 @@ import Header from '../components/header/Header.astro';
 import Footer from '../components/footer/Footer.astro';
 
 import '../styles/global.css';
+import StarsCanvas from '@components/main/StarBackground';
 
 interface Props {
   pageTitle: string;
@@ -29,5 +30,6 @@ const { pageTitle } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <StarsCanvas client:load />
   </body>
 </html>
