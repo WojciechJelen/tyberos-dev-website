@@ -1,7 +1,1 @@
-.header-scrolled {
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.2);
-  transition:
-    background-color 0.3s,
-    backdrop-filter 0.3s;
-}
+
